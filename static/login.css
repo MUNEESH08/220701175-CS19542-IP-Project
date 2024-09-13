@@ -17,8 +17,8 @@ body {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   width: 90%;
   margin-left: 4%;
-  max-width: 500px; /* Increased max-width for a larger box */
-  padding: 40px; /* Increased padding for better spacing */
+  max-width: 500px; /* Larger box for bigger screens */
+  padding: 40px; /* Better spacing */
   background: rgba(255, 255, 255, 0.1);
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.5);
@@ -26,9 +26,9 @@ body {
   backdrop-filter: blur(10px);
 }
 
-h1{
+h1 {
   color: white;
-  font-family:'Times New Roman', Times, serif;
+  font-family: 'Times New Roman', Times, serif;
   margin-top: 15%;
   margin-bottom: 15%;
   font-size: 2.2em;
@@ -41,18 +41,18 @@ h2 {
   margin-bottom: 25px; /* Adjusted margin for better visual spacing */
 }
 
-.h{
+.h {
   color: white;
   margin-top: 5%;
   margin-left: 13%;
 }
 
-a{
+a {
   color: black;
   text-decoration: none;
 }
 
-a:hover{
+a:hover {
   color: blue;
 }
 
@@ -76,7 +76,7 @@ a:hover{
   transition: border-color 0.3s;
 }
 
-.input-box input:focus, 
+.input-box input:focus,
 .input-box input:valid {
   border-bottom-color: #007BFF;
 }
@@ -135,5 +135,60 @@ button:hover {
   .input-box input,
   .input-box label {
     font-size: 16px; /* Slightly larger font size on smaller screens */
+  }
+}
+
+/* Additional Media Queries for Mobile */
+@media (max-width: 576px) {
+  body {
+    justify-content: flex-start;
+    padding-top: 20px;
+  }
+
+  .login-box {
+    width: 100%;
+    padding: 20px; /* Reduced padding for mobile */
+    margin: 0 10px; /* Reduced margin for mobile */
+    max-width: 400px; /* Reduce max width for mobile devices */
+  }
+
+  h2 {
+    font-size: 1.6em; /* Further reduced font size for smaller screens */
+    margin-bottom: 20px;
+  }
+
+  .input-box {
+    margin: 20px 0; /* Slightly reduced margin between input boxes */
+  }
+
+  .input-box input {
+    padding: 12px; /* Reduced padding for input fields on mobile */
+    font-size: 14px; /* Reduced font size for inputs */
+  }
+
+  button {
+    padding: 12px; /* Reduced padding for button */
+    font-size: 0.9em; /* Reduced button text size */
+  }
+}
+
+@media (max-width: 400px) {
+  .login-box {
+    padding: 15px; /* Further reduced padding for very small screens */
+    margin: 0 5px;
+  }
+
+  h2 {
+    font-size: 1.4em; /* Further reduced font size */
+  }
+
+  .input-box input {
+    padding: 10px; /* Smaller input padding */
+    font-size: 12px; /* Smaller font size for inputs */
+  }
+
+  button {
+    padding: 10px; /* Smaller button padding */
+    font-size: 0.8em; /* Smaller button font size */
   }
 }
