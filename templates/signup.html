@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="/static/signup.css" />
+    <style>
+        .error-message {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <h1>Join LOCTOGLOB Today!</h1>
+        <div class="signup-box">
+            <form action="/connectDb" method="POST" class="clearfix" onsubmit="return validateForm()">
+                <h2>Signup</h2>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                    <input type="text" id="username" name="username" required>
+                    <label> Name</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon" id="eye-icon" onclick="togglePasswordVisibility()">
+                        <ion-icon name="eye-off"></ion-icon>
+                    </span>
+                    <input type="password" id="password" name="password" required>
+                    <label> Password</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="key-outline"></ion-icon></span>
+                    <input type="password" id="confirm-password" name="confirm-password" required>
+                    <label> Confirm Password</label>
+                </div>
+                <br>
+                <span id="error-message" class="error-message"></span>
+                <br>
+                <button type="submit" value="signup">Signup</button>
+                <p class="h">Already having an account? <a href="/">Sign In</a></p>
+            </form>
+        </div>
+    </section>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+        function togglePasswordVisibility() {
+            var passwordField = document.getElementById("password");
+            var confirmPasswordField = document.getElementById("confirm-password");
+            var eyeIcon = document.getElementById("eye-icon");
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+                confirmPasswordField.type = "text";
+                eyeIcon.innerHTML = '<ion-icon name="eye"></ion-icon>';
+            } else {
+                passwordField.type = "password";
+                confirmPasswordField.type = "password";
+                eyeIcon.innerHTML = '<ion-icon name="eye-off"></ion-icon>';
+            }
+        }
+
+        function validateForm() {
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirm-password").value;
+            var errorMessage = document.getElementById("error-message");
+
+            if (password !== confirmPassword) {
+                errorMessage.textContent = "Passwords do not match.";
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+
+</html>
