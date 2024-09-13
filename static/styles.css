@@ -4,7 +4,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50vh;
+  height: 100vh; /* Full viewport height */
   background: linear-gradient(135deg, #89fffd, #e79549);
   font-family: Arial, sans-serif;
   transition: background 0.3s ease;
@@ -16,101 +16,104 @@ body:hover {
 
 .container {
   background-color: rgb(191, 171, 245);
-  margin-top: 23%;
   text-align: center;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  line-height: 200%;
+  padding: 5%; /* Using percentage-based padding for flexibility */
+  border-radius: 2%; /* Relative border radius */
+  box-shadow: 0 4% 8% rgba(0, 0, 0, 0.2); /* Proportional shadow */
+  line-height: 1.5; /* Better readability */
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  width: 80%;
+  width: 80%; /* Flexible width */
+  max-width: 80vw; /* Set a maximum relative width */
 }
 
 .container:hover {
   transform: scale(1.05);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6% 10% rgba(0, 0, 0, 0.3);
 }
 
 h1 {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 2rem;
+  font-size: 5vw; /* Responsive font size */
   color: #333;
-  margin-bottom: 20px;
+  margin-bottom: 5%;
 }
 
 li {
   margin-bottom: 2%;
-  font-size: 1.1rem;
+  font-size: 2.5vw; /* Flexible font size */
   color: #555;
   transition: color 0.2s ease;
 }
 
 ol {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  text-align: left; /* Align text to the left for better readability */
   list-style-position: inside;
-  padding-left: 30px;
+  padding-left: 5%; /* Relative padding */
 }
 
 button {
   background-color: rgb(161, 130, 247);
   color: black;
   border: none;
-  padding: 15px 20px;
-  border-radius: 5px;
-  font-size: 1rem;
+  padding: 3% 5%; /* Responsive padding */
+  border-radius: 2%; /* Proportional radius */
+  font-size: 3vw; /* Flexible font size */
   cursor: pointer;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 button:hover {
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4% 10% rgba(0, 0, 0, 0.2);
 }
 
+/* Tablet Devices (768px and below) */
 @media (max-width: 768px) {
   body {
-    height: 70vh;
+    height: 100vh;
     flex-direction: column;
   }
 
   .container {
-    margin-top: 10%;
-    width: 90%;
-    padding: 15px;
+    width: 90%; /* Expand width on smaller screens */
+    padding: 4%; /* Slightly reduce padding */
   }
 
   h1 {
-    font-size: 1.8rem;
+    font-size: 6vw; /* Larger responsive font */
   }
 
   li {
-    font-size: 1rem;
+    font-size: 3vw;
   }
 
   button {
-    padding: 12px 18px;
-    font-size: 0.9rem;
+    padding: 3% 4%;
+    font-size: 3.5vw;
   }
 }
 
+/* Mobile Devices (480px and below) */
 @media (max-width: 480px) {
+  body {
+    height: auto; /* Allow scrolling on very small screens */
+    padding-top: 10%;
+  }
+
   .container {
-    margin-top: 5%;
-    width: 95%;
-    padding: 10px;
+    width: 95%; /* Nearly full width for small screens */
+    padding: 5%;
   }
 
   h1 {
-    font-size: 1.5rem;
+    font-size: 7vw; /* Larger font for smaller devices */
   }
 
   li {
-    font-size: 0.9rem;
+    font-size: 3.5vw;
   }
 
   button {
-    padding: 10px 15px;
-    font-size: 0.8rem;
+    padding: 4% 6%;
+    font-size: 4vw;
   }
 }
