@@ -9,11 +9,6 @@ app.secret_key = os.getenv('SECRET_KEY', 'default_secret_key')
 # Set up logging
 logging.basicConfig(level=logging.INFO)
 
-EXECUTABLES_FOLDER = os.path.join(os.getcwd(), 'executables')
-
-if not os.path.exists(EXECUTABLES_FOLDER):
-    os.makedirs(EXECUTABLES_FOLDER)
-
 # MongoDB Atlas connection
 mongo_uri = os.getenv('MONGO_URI')
 client = MongoClient(mongo_uri)
