@@ -1,0 +1,140 @@
+.lgtitle {
+    margin-top: 8%;
+  }
+  
+  body {
+    background-color: rgb(33, 0, 44);
+  }
+  
+  .sjw {
+    font-family: Arial, sans-serif;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 2%;
+  }
+  
+  .container {
+    background-color: #ad51e2;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #a013d3;
+    width: 400px;
+  }
+  
+  .container:hover {
+    transition: 1s;
+    border-radius: 0px;
+    box-shadow: 0 0 20px #8103c5;
+  }
+  
+  .form-header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  h1 {
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+    margin: 0 15px;
+    padding-bottom: 5px;
+  }
+  
+  h1.active {
+    color: #490261;
+    border-bottom: 2px solid #490261;
+  }
+  
+  .form-content {
+    display: block;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #6d138b;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #5b0578;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .container {
+      width: 90%;
+      padding: 15px;
+    }
+  
+    h1 {
+      font-size: 20px;
+    }
+  
+    input[type="text"],
+    input[type="password"] {
+      padding: 8px;
+      font-size: 14px;
+    }
+  
+    input[type="submit"] {
+      padding: 8px;
+      font-size: 14px;
+    }
+  
+    .sjw {
+      margin-top: 5%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .lgtitle {
+      margin-top: 15%;
+    }
+  
+    .container {
+      padding: 10px;
+      border-radius: 5px;
+    }
+  
+    h1 {
+      font-size: 18px;
+      margin: 0 10px;
+    }
+  
+    input[type="text"],
+    input[type="password"] {
+      padding: 6px;
+      font-size: 12px;
+    }
+  
+    input[type="submit"] {
+      padding: 6px;
+      font-size: 12px;
+    }
+  }
+  
