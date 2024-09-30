@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LOCTOGLOB</title>
+    <link rel="stylesheet" href="/static/login.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="lgtitle">
+      <center>
+        <h1 style="color: rgb(184, 180, 180); font-family: Arial, Helvetica, sans-serif;">
+          WELCOME TO LOCTOGLOB!
+        </h1>
+      </center>
+    </div>
+    <div class="sjw">
+      <section class="container">
+        <div class="form-header">
+          <h1 id="logh" class="active">Login</h1>
+          <h1 id="signh">Signup</h1>
+        </div>
+        <form id="login-form" action="/login" method="POST">
+          <div class="form-content">
+            <label for="login-username" style="color: #490261;">Username:</label>
+            <input type="text" id="login-username" name="login-username" required>
+            <br><br>
+            <label for="login-password" style="color: #490261;">Password:</label>
+            <input type="password" id="login-password" name="login-password" required>
+            <br><br>
+            <input type="submit" value="Login">
+          </div>
+        </form>
+        <form id="signup-form" action="/connectDb" method="POST" onsubmit="return validateForm()">
+          <div class="form-content">
+            <label for="signup-username" style="color: #490261;">Username:</label>
+            <input type="text" id="signup-username" name="signup-username" required>
+            <br><br>
+            <label for="signup-password" style="color: #490261;">Password:</label>
+            <input type="password" id="signup-password" name="signup-password" required>
+            <br><br>
+            <label for="signup-confirm-password" style="color: #490261;">Confirm Password:</label>
+            <input type="password" id="signup-confirm-password" name="signup-confirm-password" required>
+            <br><br>
+            <input type="submit" value="Signup">
+          </div>
+        </form>
+      </section>
+    </div>
+    <script src="/static/login.js"></script>
+  </body>
+</html>
