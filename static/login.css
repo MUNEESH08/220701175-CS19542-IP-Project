@@ -1,3 +1,4 @@
+/* General Styles */
 .lgtitle {
   margin-top: 8%;
 }
@@ -95,6 +96,7 @@ input[type="submit"]:hover {
   .container {
     width: 90%;
     padding: 15px;
+    height: 500px; /* Increased height for tablets and small devices */
   }
 
   h1 {
@@ -126,6 +128,7 @@ input[type="submit"]:hover {
     width: 95%;
     padding: 10px;
     border-radius: 5px;
+    height: 600px; /* Increased height for mobile devices */
   }
 
   h1 {
