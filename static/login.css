@@ -1,84 +1,140 @@
 .lgtitle {
-    margin-top: 8%; /* Adjusted for better vertical spacing */
-}
-
-body {
+    margin-top: 8%;
+  }
+  
+  body {
     background-color: rgb(33, 0, 44);
-    font-family: Arial, sans-serif; /* Ensuring consistent font across the design */
-}
-
-.container {
+  }
+  
+  .sjw {
+    font-family: Arial, sans-serif;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 2%;
+  }
+  
+  .container {
     background-color: #ad51e2;
     padding: 20px;
     border-radius: 10px;
     border: 2px solid #a013d3;
-    margin: 10px; /* Added margin for spacing around container */
-    width: 100%; /* Full width on mobile for better use of space */
-    box-sizing: border-box; /* Ensures padding and border are included in width */
-}
-
-.container:hover {
+    width: 400px;
+  }
+  
+  .container:hover {
+    transition: 1s;
+    border-radius: 0px;
     box-shadow: 0 0 20px #8103c5;
-}
-
-.form-header, .form-content {
+  }
+  
+  .form-header {
     display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center; /* Center align to handle different text lengths */
-    width: 100%;
-}
-
-h1 {
-    font-size: 20px; /* Larger font size for readability */
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  h1 {
+    font-size: 24px;
     color: #333;
     cursor: pointer;
-    margin-bottom: 10px; /* Increased spacing */
-}
-
-h1.active {
+    margin: 0 15px;
+    padding-bottom: 5px;
+  }
+  
+  h1.active {
     color: #490261;
     border-bottom: 2px solid #490261;
-}
-
-label {
-    margin-bottom: 10px; /* Increased label spacing for clarity */
-    color: #fff; /* Changed color for better contrast */
-}
-
-input[type="text"],
-input[type="password"] {
+  }
+  
+  .form-content {
+    display: block;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
     width: 100%;
-    padding: 12px; /* Increased padding for easier interaction */
-    margin-bottom: 20px; /* Increased margin for better spacing */
-    border-radius: 5px; /* Rounded edges for a softer look */
-}
-
-input[type="submit"] {
-    padding: 12px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  input[type="submit"] {
+    width: 100%;
+    padding: 10px;
     background-color: #6d138b;
     color: white;
-    border-radius: 5px;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
-    font-size: 18px; /* Larger font size for easier reading */
-}
-
-input[type="submit"]:hover {
+    font-size: 16px;
+  }
+  
+  input[type="submit"]:hover {
     background-color: #5b0578;
-}
-
-/* Apply these styles only to devices with a width less than 768px */
-@media (max-width: 768px) {
-    .lgtitle {
-        margin-top: 12%; /* Increased top margin for better vertical rhythm */
-    }
-
-    .sjw {
-        flex-direction: column; /* Align content vertically */
-        margin-top: 5%;
-    }
-
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
     .container {
-        border-radius: 5px; /* Softer border-radius for a friendlier feel */
-        padding: 15px; /* Slightly reduced padding */
+      width: 90%;
+      padding: 15px;
     }
-}
+  
+    h1 {
+      font-size: 20px;
+    }
+  
+    input[type="text"],
+    input[type="password"] {
+      padding: 8px;
+      font-size: 14px;
+    }
+  
+    input[type="submit"] {
+      padding: 8px;
+      font-size: 14px;
+    }
+  
+    .sjw {
+      margin-top: 5%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .lgtitle {
+      margin-top: 15%;
+    }
+  
+    .container {
+      padding: 10px;
+      border-radius: 5px;
+    }
+  
+    h1 {
+      font-size: 18px;
+      margin: 0 10px;
+    }
+  
+    input[type="text"],
+    input[type="password"] {
+      padding: 6px;
+      font-size: 12px;
+    }
+  
+    input[type="submit"] {
+      padding: 6px;
+      font-size: 12px;
+    }
+  }
+  
