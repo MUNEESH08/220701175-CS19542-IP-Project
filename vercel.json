@@ -13,7 +13,7 @@
       }
     ],
     "env": {
-      "MONGO_URI": "mongodb+srv://muneeshpalanivel123:dZZg3obtIb75R6tu@cluster0.6wsbo.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
+      "MONGO_URI": "mongodb+srv://projectmark8904:N8BthaonV2Qj3AXo@cluster0.n7wvp.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
       "SECRET_KEY": "3f2b1f2c4e6a2c9a5d8e7d6f0a2d1c7b"
     }
   }
