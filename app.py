@@ -8,8 +8,8 @@ app.secret_key = os.getenv('SECRET_KEY', 'default_secret_key')
 logging.basicConfig(level=logging.INFO)
 mongo_uri = os.getenv('MONGO_URI')
 client = MongoClient(mongo_uri)
-db = client['login']
-users_collection = db['users']
+db = client['locations']
+users_collection = db['locationsDB']
 
 @app.route('/')
 def index():
