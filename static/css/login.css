@@ -96,8 +96,10 @@ input[type="submit"]:hover {
 }
 
 @media (max-width: 600px) {
-  body{
-    background-image:url('../images/7.jpg') ;
+  body {
+    background-image: url('../images/7.jpg');
+    background-size: cover;
+    background-position: center;
   }
   .container {
     width: 90%;
