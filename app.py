@@ -37,6 +37,9 @@ def connectDb():
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
+    if 'username' in session:  # Check if user is already logged in
+        return redirect(url_for('dashboard'))
+
     if request.method == 'POST':
         username = request.form.get('login-username')
         password = request.form.get('login-password')
