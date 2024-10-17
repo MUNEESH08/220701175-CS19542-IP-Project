@@ -83,7 +83,7 @@ def ngrok():
         return redirect(url_for('login'))
     return render_template('ngrok.html')
 
-@app.route('/logout')
+@app.route('/log-out')
 def logout():
     session.pop('username', None)
     return redirect(url_for('login'))
