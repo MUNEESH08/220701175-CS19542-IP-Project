@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reset Password</title>
+    <link rel="stylesheet" href="/static/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="lgtitle"></div>
+    <div class="sjw">
+        <section class="container">
+            <h1 style="color: rgba(75, 169, 255, 0.9); margin-left: 9%;">Enter New Password</h1><br>
+            {% if message %}
+            <div style="color: red; text-align: center;">{{ message }}</div>
+            {% endif %}
+            <form action="/reset_verify/{{ user_id }}" method="POST">
+                <div class="form-content">
+                    <!-- New Password Input -->
+                    <label for="reset-password" style="color: white;">New Password:</label>
+                    <div style="position: relative;">
+                        <input type="password" id="reset-password" name="reset-password" required>
+                        <i class="fas fa-eye toggle-password" onclick="togglePassword('reset-password')"></i>
+                    </div>
+                    <br><br>
+                    <!-- Re-Confirm Password Input -->
+                    <label for="reset-confirm-password" style="color: white;">Re-Confirm Password:</label>
+                    <div style="position: relative;">
+                        <input type="password" id="reset-confirm-password" name="reset-confirm-password" required>
+                        <i class="fas fa-eye toggle-password" onclick="togglePassword('reset-confirm-password')"></i>
+                    </div>
+                    <br><br>
+                    <input type="submit" value="Reset Password">
+                </div>
+            </form>
+        </section>
+    </div>
+    <script>
+        function togglePassword(inputId) {
+            var input = document.getElementById(inputId);
+            var icon = input.nextElementSibling;
+            if (input.type === "password") {
+                input.type = "text";
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            } else {
+                input.type = "password";
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            }
+        }
+    </script>
+</body>
+</html>
