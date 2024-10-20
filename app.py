@@ -42,7 +42,7 @@ def connectDb():
 
         user = users_collection.find_one({'email': email})
         if user:
-            return render_template('login.html', message='Mail already exists!')
+            return render_template('login.html', message='Email already exists!')
 
         users_collection.insert_one({
             'username': username,
