@@ -13,8 +13,7 @@
       }
     ],
     "env": {
-      "MONGO_URI": "mongodb+srv://220701175:Muneesh@cluster0.ayn5t.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
+      "MONGO_URI": "mongodb+srv://Muneesh:hM1s1vdDLvXab2z8@muneesh.ayn5t.mongodb.net/?retryWrites=true&w=majority&appName=Muneesh",
       "SECRET_KEY": "3f2b1f2c4e6a2c9a5d8e7d6f0a2d1c7b"
     }
   }
-  
