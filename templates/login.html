@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOCTOGLOB</title>
+    <link rel="stylesheet" href="/static/login.css" />
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="lgtitle"></div>
+    <div class="sjw">
+        <section class="container">
+            <br>
+            <center>
+            <h1 style="color: rgba(75, 169, 255, 0.9);">WELCOME TO LOCTOGLOB!</h1>
+        </center>
+        <br>
+            <div class="form-header">
+                <h1 id="logh" class="active">Login</h1>
+                <h1 id="signh">Signup</h1>
+            </div>
+            {% if message %}
+            <div style="color:chartreuse; text-align: center;">{{ message }}</div>
+            {% endif %}
+            <br>
+            <form id="login-form" action="/login" method="POST">
+                <div class="form-content">
+                    <label for="login-username" style="color: white;">Username:</label>
+                    <input type="text" id="login-username" name="login-username" required>
+                    <br><br>
+                    <label for="login-password" style="color: white;">Password:</label>
+                    <input type="password" id="login-password" name="login-password" required>
+                    <br><br>
+                    <label for="login-email" style="color: white;">Email:</label>
+                    <input type="email" id="login-email" name="login-email" required>
+                    <br>
+                    <a href="/reset" style="text-decoration: none; color:#006BFF;">Forgot Password?</a>
+                    <br><br>
+                    <input type="submit" value="Login">
+                </div>
+            </form>
+            <form id="signup-form" action="/connectDb" method="POST" onsubmit="return validateForm()">
+                <div class="form-content">
+                    <label for="signup-username" style="color: white;">Username:</label>
+                    <input type="text" id="signup-username" name="signup-username" required>
+                    <br><br>
+                    <label for="signup-email" style="color: white;">Email:</label>
+                    <input type="email" id="signup-email" name="signup-email" required>
+                    <br><br>
+                    <label for="signup-password" style="color: white;">Password:</label>
+                    <input type="password" id="signup-password" name="signup-password" required>
+                    <br><br>
+                    <label for="signup-confirm-password" style="color: white;">Confirm Password:</label>
+                    <input type="password" id="signup-confirm-password" name="signup-confirm-password" required>
+                    <br><br>
+                    <input type="submit" value="Signup">
+                </div>
+            </form>
+        </section>
+    </div>
+    <script src="/static/login.js"></script>
+</body>
+</html>
