@@ -40,7 +40,7 @@ def connectDb():
         if password != confirm_password:
             return render_template('login.html', message='Passwords do not match!')
 
-        user = users_collection.find_one({'mail': mail})
+        user = users_collection.find_one({'email': email})
         if user:
             return render_template('login.html', message='Mail already exists!')
 
