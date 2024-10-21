@@ -84,7 +84,8 @@ def login():
     if request.method == 'POST':
         username = request.form.get('login-username')
         password = request.form.get('login-password')
-        user = users_collection.find_one({'username': username})
+        email = request.form.get('login-email')
+        user = users_collection.find_one({'login-email': email})
 
         if user and user['password'] == password:
             if not user['verified']:
