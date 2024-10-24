@@ -51,7 +51,7 @@ def connectDb():
             'verified': False
         })
 
-        user = users_collection.find_one({'username': username})
+        user = users_collection.find_one({'email': email})
         verification_link = url_for('verify_email', user_id=str(user['_id']), _external=True)
 
         msg = Message('Email Verification', sender=app.config['MAIL_USERNAME'], recipients=[email])
