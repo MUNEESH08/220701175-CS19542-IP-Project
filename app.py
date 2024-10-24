@@ -19,7 +19,7 @@ users_collection = db['login_users']
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
 app.config['MAIL_USERNAME'] = os.getenv('MAIL_USERNAME', '220701175@rajalakshmi.edu.in')
-app.config['MAIL_PASSWORD'] = os.getenv('MAIL_PASSWORD', 'eghl xest absr anqv')
+app.config['MAIL_PASSWORD'] = os.getenv('MAIL_PASSWORD', 'htvk tesd urqf unug')
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
 
